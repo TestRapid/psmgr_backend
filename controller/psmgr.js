@@ -1,8 +1,10 @@
 import axios from "axios";
 
+import { apiUrl } from "../config/apis.js";
+
 import { decrypt, encrypt } from "../utils/auth.js";
 
-const api = axios.create({ baseURL: `http://localhost:5001` });
+const api = axios.create({ baseURL: apiUrl });
 
 export const getList = async (req, res) => {
 	try {
